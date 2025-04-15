@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Events from "./components/Events";
+import SignUpForm from "./components/SignUpForm";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,9 +14,10 @@ function App() {
 
   return (
     <>
-      <Navbar onSearch={handleNavbarSearch} />
-      <h2>Resultados para: "{searchTerm}"</h2>
-      <Events searchTerm={searchTerm} />
+      {/* <Navbar onSearch={handleNavbarSearch} /> */}
+      {/* <h2>Resultados para: "{searchTerm}"</h2> */}
+        {/* <Events searchTerm={searchTerm} /> */}
+        <SignUpForm />
     </>
   );
 }
