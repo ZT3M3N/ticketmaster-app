@@ -1,21 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Events from "./components/Events";
-import SignUpForm from "./components/SignUpForm";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
+  const containerRef = useRef();
 
   const handleNavbarSearch = (term) => {
+    console.log(containerRef.current.setSearch(""));
     setSearchTerm(term);
   };
 
   return (
     <>
-      {/* <Navbar onSearch={handleNavbarSearch} /> */}
-      {/* <h2>Resultados para: "{searchTerm}"</h2> */}
-        {/* <Events searchTerm={searchTerm} /> */}
-        <SignUpForm />
+      <Navbar onSearch={handleNavbarSearch} ref={containerRef} />
+      <Events searchTerm={searchTerm} />
     </>
   );
 }
