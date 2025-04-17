@@ -16,6 +16,7 @@ const EventItem = ({ id, info, name, image, onEventClick }) => {
         <h4 className={styles.eventName}>{name}</h4>
         <p className={styles.eventInfo}>{info}</p>
         <button onClick={handleSeeMoreClick} className={styles.seeMoreBnt}>
+          {/* <Link to={`/detail/${id}`}>Ver más</Link> */}
           Ver más
         </button>
       </div>
